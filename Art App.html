@@ -7,45 +7,39 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" 
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     </head>
     <body>
-        <!-- Header -->
-         <header>
         <header>
             <img class="logo" src="images/logo.png" alt="Logo">
             <nav>
                 <ul class="navbar">
                     <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
                     <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
-                    <li><a href="#projects"><i class="fas fa-briefcase"></i> Projects</a></li>
+                    <li><a href="#gallery"><i class="fas fa-images"></i> Gallery</a></li>
                 </ul>
             </nav>
             <a href="#contact" class="contact"><button><i class="fas fa-envelope"></i> Contact</button></a>
         </header>
 
-        <!-- Hero Section -->
-        <section id="home" class="hero">
-          <div class="heroLeft">
-            <div class="profilePic">
-                <img src="images/profile.png" alt="Profile Picture">
-            </div>
-        </div>
-
-        <div class="heroRight">
-            <h2>Hi, I'm<br> <h1>Hazel Ann P. Paradela</h1></h2>
-            <h2 class="role">IT student</h2>
-            <p class="heroDesc">Discover a collection of my creative projects.</p>
-
-            <div class="heroButtons">
-                <a href="#projects" class="projectBtn">View My Projects</a>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Hi, I'm </h2>
+                <h1>Hazel Ann P. Paradela</h1>
             </div>
         </section>
 
-        <!-- About Section -->
+        <!--section id="home">
+          <div class="hero-content">
+            <h1>Welcome to My Webpage!</h1>
+            <h3>Hi, I'm Hazel Ann P. Paradela</h3>
+            <p>Discover a collection of my creative projects.</p>
+        </section>-->
+
         <section id="about">
           <h2>About Me</h2>
           <p>I'm a 1st-year Information Technology student at Naga College Foundation,
@@ -55,41 +49,85 @@
             <br>I aim to create visually appealing and functional websites that provide a great user experience. 
             <br>In my free time, I like to scroll on my Facebook feed, watch TikTok videos, and read Wattpad stories.</p>
         </section>
-        
-        <!-- Projects Section -->
-        <section id="projects">
+
+        <section id="gallery">
           <h2>Projects</h2>
-          <p>Check out some of my latest project in Art Appreciation!</p>
+          <p>Check out some of my latest projects in Art Appreciation!</p>
           <img src="https://via.placeholder.com/300" alt="Activity 1: Art Around Me: Reflection">
           <img src="https://via.placeholder.com/300" alt="Prelim Project: Art Through Time: Traditional">
           <img src="https://via.placeholder.com/300" alt="Prelim Exam: Digital Art and Design Magazine">
           <img src="https://via.placeholder.com/300" alt="Activity 4: Generative Art: Digital Art with p5.js">
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact">
-          <h2>Contact Me</h2>
-          <div class="contact-row">
-            <i class="fa-solid fa-envelope"></i>
-            <p>hazelannparadela@gmail.com</p>
-            <i class="fa-solid fa-envelope"></i>
-            <p>haparadela@gbox.ncf.edu.ph</p>
-          </div>
-          <div class="footerContent">
-            <div class="socialIcons">
-              <a href="https://www.facebook.com/dhazeannnight"><i class="fa-brands fa-facebook"></i></a>
-              <a href="https://www.instagram.com/dhaze_annnight?igsh=MTdtN2dtM29rZnpxZw=="><i class="fa-brands fa-instagram"></i></a>
-              <a href="https://github.com/dhazeannnight"><i class="fa-brands fa-github"></i></a>
-              <a href="https://x.com/dhaze_annnight"><i class="fa-brands fa-x"></i></a>
-              <a href="https://www.tiktok.com/@dhaze_annnight?_r=1&_t=ZS-94yar6CT0yq"><i class="fa-brands fa-tiktok"></i></a>
-            </div>
-          </div>
+        <!--Contact Section Done-->
+        <section id="contact" class="contactSection">
+          <h2 class="contactTitle">Contact Me</h2>
+          <p class="contactDesc">
+            Feel free to reach out to me directly through any of the platforms below!
+          </p>
+          <div class="contactContainer">
+            <a href="mailto:hazelpadela@gmail.com" class="Card">
+                <div class="iconCircle">
+                <i class="fa-solid fa-envelope"></i>
+                </div>
+                <h3>Personal Email</h3>
+                <p>hazelparadela@gmail.com</p>
+            </a>
+            <a href="mailto:haparadela@gbox.ncf.edu.ph" class="Card">
+                <div class="iconCircle">
+                <i class="fa-solid fa-envelope"></i>
+                </div>
+                <h3>Institutional Email</h3>
+                <p>haparadela@gbox.ncf.edu.ph</p>
+            </a>
+            <a href="https://github.com/dhazeannnight" class="Card">
+                <div class="iconCircle">
+                <i class="fab fa-github"></i>
+                </div>
+                <h3>GitHub</h3>
+                <p>github.com/dhazeannnight</p>
+            </a>
+            <a href="tel:09562218646" class="Card">
+                <div class="iconCircle">
+                <i class="fa-solid fa-phone"></i>
+                </div>
+                <h3>Phone</h3>
+                <p>09562218646</p>
+            </a>
+        </div>
+    </section>
+            <!--Contact Section End-->
+            
+            <!--Footer Done-->
+            <footer>
+                <div class="footerRow">
+                    <div class="footerLeft">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#gallery">Gallery</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
 
-        <!-- Footer -->
-        <footer>
-          <div class="footerBottom">
-            <p>&copy Copyright 2026<br>All rights reserved. Designed by <span class="designer">Hazel Ann.</span></p>
-            </div>
-        </footer>
-    </body>
-</html>
+                    <div class="footerRight">
+                        <h3>Follow Me</h3>
+                        <div class="socialIcons">
+                            <a href="https://www.facebook.com/dhazeannnight"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/dhaze_annnight"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://github.com/dhazeannnight"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://x.com/dhaze_annnight"><i class="fa-brands fa-x"></i></a>
+                        <a href="https://www.tiktok.com/@dhaze_annnight"><i class="fa-brands fa-tiktok"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="footerBottom">
+                    <p>&copy; 2024 Hazel Ann P. Paradela. All rights reserved.</p>
+                </div>
+            </footer>
+            <!--Footer End-->
+        </body>
+    </html>

@@ -1,16 +1,16 @@
+html {
+    scroll-behavior: smooth;
+    height: 100%
+}
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: "Verdana", sans-serif;
-}
-
-html {
-    scroll-behavior: smooth;
 }
 
 body {
-    background-color: #141a2c;
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100%;
 }
 
 li, a, button {
@@ -20,6 +20,7 @@ li, a, button {
     text-decoration: none;
 }
 
+/*Header*/
 header {
     display: flex;
     justify-content: flex-end;
@@ -35,7 +36,7 @@ header {
 .logo {
     cursor: pointer;
     margin-right: auto;
-    width: 170px;
+    width: 175px;
     height: 55px;
 }
 
@@ -69,99 +70,156 @@ button {
 button:hover {
     background-color: rgb(141, 182, 60);
 }
-/*End of Header*/
+/*Header end*/
 
 .hero {
-    padding: 80px 10%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 60px;
     min-height: 100vh;
-}
-
-.hero-left {
+    background-color: rgb(8, 14, 34);
+    background-size: cover;
+    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
-.profilePic {
-    width: 230px;
-    height: 230px;
-    margin: 30px auto 20px;
-    border-radius: 50%;
-    padding: 6px;
-    background: linear-gradient(135deg, #07295f, #1e3a8a);
-    box-shadow: 0 0 30px rgba(59, 130, 246, 0.5);
+/*Contact*/
+.contactSection {
+    text-align: center;
+    padding: 120px 10%;
+    background: radial-gradient(circle at top, #0f172a, #020617);
 }
 
-.profilePic img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    object-fit: cover;
+.contactTitle{
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: beige;
 }
 
-.heroRight {
-    max-width: 500px;
+.contactTitle::after{
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #3b83f6;
+    margin: 10px auto;
+    border-radius: 5px;
+    margin-bottom: 20px;
 }
 
-.heroRight h1 {
-    font-size: 45px;
-    margin-bottom: 10px;
-    color: rgb(197, 216, 245);
-}
-.heroRight h1 {
-    font-size: 45px;
-    margin-bottom: 10px;
-    color: rgb(197, 216, 245);
-}
-
-
-.role {
-    font-size: 18px;
-    color: #254b88;
-    margin-bottom: 15px;
-}  
-
-.heroDesc {
+.contactDesc {
     color: #9ca3af;
-    margin-bottom: 25px;
-    line-height: 1.6;
+    margin-bottom: 60px;
+    font-size: 18px;
 }
 
-.heroButtons {
+.contactContainer {
     display: flex;
-    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
-.heroButtons a {
-    padding: 10px 20px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-size: 14px;
-    display: inline-flex;
+.Card {
+    width: 190px;
+    height: 220px;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 8px;
-    background-color: olivedrap;
+    border: 2px solid rgba(59, 130, 246, 0.2);
+    justify-content: flex-start;
+    padding-top: 35px;
+    border-radius: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
     transition: 0.3s;
 }
 
+.iconCircle {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background: rgba(108, 149, 214, 0.1);
+
+    margin-bottom: 25px;
+}
+
+
+.iconCircle i {
+    font-size: 28px;
+    color: #3b82f6;
+    transform: translateY(2px);
+}
+
+.Card h3 {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.Card p {
+    color: #a6afc0;
+    font-size: 14px;
+    padding: 0 30px;
+    word-break: break-word;
+    text-align: center;
+}
+
+.Card:hover{
+    transform: translateY(-10px);
+    border-color: #3b82f6;
+    box-shadow: 0 15px 40px rgba(59, 130, 246, 0.25);
+}
+/*Contact End*/
+
+/*Footer*/
 footer {
     background-color: #111;
+    padding: 30px 10%;
+    color: white;
 }
-.footerContent {
-    width: 100%;
-    padding: 70px 30px 20px;
+
+.footerRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footerLeft ul {
+    list-style: none;
+}
+
+.footerLeft ul li {
+    margin: 8px 0;
+}
+
+.footerLeft ul li a {
+    color: white;
+    text-decoration: none;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.footerLeft ul li a:hover {
+    opacity: 1;
+}
+
+.footerRight {
+    text-align: right;
 }
 
 .socialIcons {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
 }
 
-.socialIcons a{
+
+.socialIcons a {
     text-decoration: none;
     padding: 10px;
     background-color: white;
@@ -169,14 +227,14 @@ footer {
     border-radius: 50%;
 }
 
-.socialIcons a i{
-    font-size: 32px;
+.socialIcons a i {
+    font-size: 24px;
     color: black;
     opacity: 0.9;
 }
 
 .socialIcons a:hover {
-    color: #111
+    background-color: white;
     transition: 0.5s;
 }
 
@@ -186,34 +244,17 @@ footer {
     transition: 0.5s;
 }
 
-.footerbottom {
-    background-color: #000;
-    padding: 20px;
-    text-align: center;
+.footerBottom {
+    text-align: center;  
+    padding-top: 20px;
+    padding-bottom: 1px;
+    margin-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 14px;
 }
 
-.footerbottom p{
+.footerBottom p {
     color: white;
+    font-size: 14px;
 }
-
-.designer {
-    opacity: 0.7;
-    text-transform: uppercase;
-    letter-spacing: 1.0px;
-    font-weight: 400;
-    margin: 0px 5px;
-}
-
-@media(max-width: 767px){
-    .footer {
-        width: 100%;
-        margin-bottom: 30px;
-    }
-}
-
-@media(max-width: 574px) {
-    .footer {
-        width: 100%;
-        margin-bottom: 30px;
-    }
-}
+/*Footer End*/

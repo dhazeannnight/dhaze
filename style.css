@@ -72,21 +72,209 @@ button:hover {
 }
 /*Header end*/
 
-.hero {
+section {
+    scroll-margin-top: 75px;
+}
+
+/*Hero Section*/
+#home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    padding: 100px 10%;
     min-height: 100vh;
-    background-color: rgb(8, 14, 34);
+    background: #00D4FF;
+    background: linear-gradient(90deg,rgba(0, 212, 255, 1) 0%, rgba(1, 100, 140, 1) 0%, rgba(2, 0, 36, 1) 100%, rgba(9, 9, 121, 1) 37%);
     background-size: cover;
     background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     overflow: hidden;
 }
+.profile {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: #001a4d;
+    border-weight: 2px;
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.4);
+}
+
+.content {
+    max-width: 600px;
+}
+
+.content h1 {
+    font-size: 3rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: beige;
+}
+
+.content h2 {
+    color: #3b82f6;
+    margin: 10px 0 20px;
+}
+
+.content p {
+    color: #aaa;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 12px 22px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.primary {
+    background: #3b82f6;
+    color: #fff;
+}
+
+.outline {
+    border: 1px solid #444;
+    color: #ccc;
+}
+
+.dark {
+    background: #111827;
+    color: #ccc;
+}
+/*Hero Section End*/
+
+
+/*About Me*/
+#about {
+    display: flex;
+    padding: 80px 10%;
+    background: linear-gradient(to right, #020617, #020c2e, #001a4d);
+    color: white;
+    padding-bottom: 170px;
+}
+
+.about-container {
+    display: flex;
+    gap: 60px;
+    width: 100%;
+}
+
+.aboutTitle {
+    width: 30%;
+}
+
+.aboutTitle  h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: beige;
+    padding-top: 40px;
+}
+
+.aboutTitle  h2::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 4px;
+    background: #3b83f6;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.aboutText {
+    width: 70%;
+    padding-top: 40px;
+}
+
+.aboutText p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #aaa;
+    margin-bottom: 25px;
+}
+
+/*Gallery*/
+#gallery {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 50px 6%;
+    padding-bottom: 130px;
+    background: radial-gradient(circle at top, #0f172a, #020617);
+}
+
+.galleryIntro {
+    flex: 0.7;
+}
+
+.galleryIntro h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: beige;
+}
+
+
+.galleryIntro h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #3b83f6;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.galleryIntro p {
+    color: #9ca3af;
+    margin-bottom: 60px;
+    font-size: 18px;
+    line-height: 1.6;
+    align-self: center;
+    padding-top: 10px;
+    text-align: left;
+}
+
+.grid {
+    flex 1.3;
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    grid-template-rows: repeat(3, 120px);
+    gap: 15px;
+}
+
+.grid img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.grid img:hover {
+  transform: scale(1.15);
+  z-index: 2;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.center {
+  border-radius: 50%;
+  border: 4px solid #4CAF50;
+}
+/*Gallery End*/
 
 /*Contact*/
 .contactSection {
     text-align: center;
     padding: 120px 10%;
+    padding-top: 70px;
     background: radial-gradient(circle at top, #0f172a, #020617);
 }
 
@@ -105,17 +293,19 @@ button:hover {
     margin: 10px auto;
     border-radius: 5px;
     margin-bottom: 20px;
+    align-self: center;
 }
 
 .contactDesc {
     color: #9ca3af;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
     font-size: 18px;
 }
 
 .contactContainer {
     display: flex;
     justify-content: center;
+    padding-top: 20px;
     flex-wrap: wrap;
     gap: 20px;
 }
@@ -256,5 +446,4 @@ footer {
 .footerBottom p {
     color: white;
     font-size: 14px;
-}
-/*Footer End*/
+}/*Footer End*/
